@@ -1,0 +1,380 @@
+@charset "UTF-8";
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "Open Sans", sans-serif;
+	font-size: 16px;
+}
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+img {
+	max-width: 100%;
+	border: 0;
+}
+
+/* header */
+.header { 
+	margin: 0 auto;
+	width: 1019px;
+	height: 100px;
+}
+.header .social {
+	position: relative;
+	float: left;
+	margin: 38px 0 25px;
+	width: 196px;
+	height: 25px;
+}
+.header .social ul li {
+	float: left;
+}
+.header .social li a {
+	display: block;
+	margin: 0 3px;
+	width: 25px;
+	height: 25px;
+}
+.header .social li:first-child a {
+	margin-left: 0;
+}
+.header .social .mileage_btn {
+	margin-left: 108px;
+	width: 88px;
+	height: 24px;
+} 
+.header .signature {
+	float: left;
+	margin: 10px 0 0 236px;
+	width: 155px;
+	height: 78px;
+}
+.header .signature img {
+	width: 100%;
+}
+.header .location {
+	float: right;
+	margin-top: 38px;
+	height: 26px;
+}
+.header .location li { 
+	float: left;
+	height: 26px;
+}
+.header .location li a {
+	display: block;
+	padding: 0 15px;
+	line-height: 26px;
+	text-decoration: none;
+	text-align: center;
+	font-family: "돋움", Dotum, sans-serif;
+	font-size: 12px;
+	background: url(../images/bg_table_col.gif) no-repeat left center; 
+	color: #797d85;
+}
+.header .location li:first-child a {
+	background: none;
+}
+.header .location li:nth-child(3) a {
+	padding-right: 0;
+}
+
+/* menu CSS */
+
+/* nav */
+/*mobile tab의 기본 CSS ->display: none; position: absolute; right: 0; top: 0;*/
+.mobile_tab {
+	display: none;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 120;
+	margin-right: 20px;
+	margin-top: 15px;
+	width: 28px;
+}
+.mobile_tab a {
+	display: block;
+	width: 28px;
+}
+
+/* 모바일 탭기능  
+.mobile_nav                     right:-220px;
+.mobile_nav.active              right:0;
+$(".mobile_tab").click(function(){
+	$(".mobile_nav").addClass("active");
+	$(".transparency").addClass("active");
+});
+$(".transparency").click(function(){
+	$(".mobile_nav").removeClass("active");
+	$(".transparency").removeClass("active");
+});
+*/
+.mobile_nav {
+	position: fixed;
+	right: -220px;
+	top: 0;
+	z-index: 150;
+	padding: 40px 24px;
+	width: 220px;
+	height: 100%;
+	background: #fff;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-box-shadow: 0 0 2px rgba(0,0,0,.2);
+	box-shadow: 0 0 2px rgba(0,0,0,.2);
+	-webkit-transition: right 0.4s ease-out;
+	transition: right 0.4s ease-out;
+}
+.mobile_nav.active {
+	right: 0;
+}
+.mobile_nav > ul > li  > a {
+	display: block;
+	padding: 0 10px;
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	text-decoration: none;
+	font-size: 14px;
+	font-weight: 600;
+	color: #2f2f2f;
+	border-bottom: 1px dotted #ccc;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.mobile_nav > ul > li:hover > a {
+	color: #b4252d;
+}
+.mobile_nav .sub {
+	display: none;
+}
+.mobile_nav .sub > li {
+	height: 35px;
+	border-top: 1px dotted #eaeaea;
+}
+.mobile_nav .sub > li:first-child {
+	border-top: none;
+}
+.mobile_nav .sub li a {
+	display: block;
+	padding: 0 10px;
+	width: 100%;
+	line-height: 35px;
+	text-decoration: none;
+	font-size: 13px;
+	color: #2f2f2f;
+	background: #f4f4f4;
+	border-bottom: 1px dotted #eaeaea;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-transition: background 0.3s;
+	transition: background 0.3s;
+}
+.mobile_nav .sub li a:hover {
+	background: #fff;
+}
+
+/*pc */
+
+/* PC마우스 오버 기능 
+.nav ul               height:54px;	overflow: hidden;
+.nav > ul.over 	      height: 185px;	
+	$(".nav > ul").hover(
+	function(){
+	$(this).addClass("over");
+	},
+	function(){
+	$(this).removeClass("over");
+	}
+	);
+
+
+*/
+.nav {
+	position: relative;
+}
+.nav > ul {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 54px;
+	overflow: hidden;
+	text-align: center;
+	background: url(../images/bg_gnb.gif) repeat-x 0 0;
+	-webkit-transition: height 0.3s;
+	transition: height 0.3s;
+}
+.nav > ul.over {
+	height: 185px;
+}
+.nav > ul > li {
+	display: inline-block;
+	position: relative;
+	margin-left: 61px;
+	height: 54px;
+	overflow: hidden;
+}
+.nav > ul.over > li {
+	height: 185px;
+}
+.nav > ul > li:first-child {
+	margin-left: 0;
+}
+.nav > ul > li > a {
+	display: block;
+	padding: 0 30px;
+	line-height: 54px;
+	text-decoration: none;
+	font-size: 14px;
+	color: #2f2f2f;
+}
+.nav > ul > li:first-child > a {
+	padding-left: 0;
+}
+.nav > ul > li:nth-child(6) > a {
+	padding-right: 0;
+}
+.nav > ul > li:hover > a {
+	color: #b4252d;
+}
+.nav .sub {
+	position: absolute;
+	margin-left: 30px;
+	padding-top: 14px;
+	width: 100%;
+	height: 131px;
+}
+.nav > ul > li:first-child .sub {
+	margin-left: 0;
+}
+.nav .sub a {
+	display: block;
+	padding: 6px 0 7px;
+	line-height: 1;
+	text-align: left;
+	text-decoration: none;
+	font-size: 12px;
+	color: #a0a0a0;
+}
+.nav .sub a:hover {
+	text-decoration: underline;
+	color: #000;
+}
+
+/* hero */
+.hero {
+	margin-top: 54px;
+}
+.hero img {
+	width: 100%;
+	height: auto;
+}
+/* 딤 창(Dim)의 CSS
+	display: none;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 130;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.4);->
+IE8에 스타일을 작성 할 때에는 스타일을 따로 지정 해야 합니다.
+.ie8 .transparency {
+	background: url(images/bg_dim.png);
+}
+transparency - 화면 가득 찬 딤 창 */
+
+/*화면에서의 z-index 정리 (다 기록 해놔야 합니다.)
+.mobile_tab          120 
+.transparency        130
+.mobile_nav          150
+*/
+
+.transparency {
+	display: none;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 130;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.4);
+}
+.transparency.active {
+	display: block;
+}
+/* responsive */
+@media only screen and (max-width: 1050px) {
+	.header {
+		width: 826px;
+	}
+	.header .signature {
+		margin-left: 146px;
+	}
+	.nav li:nth-child(6) {
+		display: none;
+	}
+	.nav li:nth-child(5) a {
+		padding-right: 0;
+	}
+}
+@media only screen and (max-width: 850px) {
+	.header {
+		width: auto;
+		height: 72px;
+	}
+	.header .social {
+		margin: 23px 0 24px 20px;
+		width: 90px;
+	}
+	.header .social .mileage_btn {
+		display: none;
+	}
+	.header .signature {
+		position: absolute;
+		left: 50%;
+		top: 0;
+		float: none;
+		margin-left: -50px;
+		width: 100px;
+		height: 54px;
+	}
+	.header .location {
+		display: none;
+	}
+	.mobile_tab {
+		display: block;
+	}
+	.nav {
+		display: none;
+	}
+	.hero {
+		margin-top: 0;
+	}
+}
+@media only screen and (max-width: 350px) {
+	.header .social {
+		display: none;
+	}
+	.header .signature {
+		left: 0;
+		top: 0;
+		margin-left: 12px;
+	}
+}
+
+/* 전체 영역이 움직이는 컨테이너 제작 */
+.container {
+	position: relative;
+	left: 0;
+	-webkit-transition: left 0.4s ease-out;
+	transition: left 0.4s ease-out;
+}
+.container.active {
+	left: -220px;
+}
