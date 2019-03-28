@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>JIEUN PORTFOLIO - Web publish(Frontend) Developer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/sub.js"></script>
+</head>
+<style>
+.header_wrapper { height: 80px; background:#fff!important; }
+.header_wrapper.fix {background:#fff!important; }
+</style>
+<body>
+    <div class="container sub">
+        <div class="header_wrapper">
+            <div class="header">
+                <div class="nav">
+                    <div class="logo"><img src="images/logo.gif" alt></div>
+                    <h2>블록캐스트</h2>
+                </div>
+            </div>
+        </div>
+        <section>
+            <h2>루티드 파트너스</h2>
+            <p class="h2_p">Responsive Site, HTML, CSS, JavaScript</p>
+            <img src="./portfolio_img/rooted_main.png" alt="pc" class="img_pc">
+            <img src="./portfolio_img/rooted_main_1080.png" alt="tablet" class="img_tablet">
+            <img src="./portfolio_img/rooted_main_m.png" alt="mobile" class="img_m">
+            <hr style= margin-top:5em;>
+            <p class="text">
+                직접 JS(jQuery) 코드를 만들어 두가지 코드를 적용 해 보았습니다. <br>
+                작업1. <a href="#sub0a">조건문(if else)을 사용하여 CSS 변경</a> <br>
+                작업2. <a href="#sub0b">증가 연산 & 감소연산 </a> <br>
+                작업3. <a href="#sub0c">조건문(if else) 그리고 비교연산자 </a> 
+            </p>
+            <hr>
+            <p class="tit_p" id="sub0a">1.조건문(if else)을 사용하여 CSS 변경</p>
+            <img src="./portfolio_img/reeted_business_pc.png" alt="">
+            <p class="text">
+                탭(atarad/blockratings/blockcast/blockinfo) 클릭 시 <br><br>
+                HTML : 4개의 div 태그를 만듭니다.<br> 
+                CSS : 화살표 클릭 시 선택 된 탭은 width : 500px, 나머지 탭은 width : 80px 바뀝니다. 또한 
+                부드러운 모션을 주기 위해 css에 transition : width 0.4s ease-in-out; 값을 주었습니다.<br>
+                JS : 조건문(if else)을 사용하여 선택 된 탭은 CSS 변경 됩니다.<br><br>              
+                위 화면에서 아래 화면으로 움직이게 됩니다.                              
+            </p>
+            <img src="./portfolio_img/reeted_business2_pc.png" alt="">
+            <p class="tit_p" id="sub0b">2.증가 연산 & 감소연산</p>
+            <img src="./portfolio_img/client_1080.png" alt="">
+            <p class="text">
+                슬라이드 화살표 클릭 시 한줄씩 이동  <br><br>
+                HTML : div > ul > li 구조를 만듭니다. <br>
+                JS : n 변수 선언 사용처는 좌 클릭 시 n 변수는 -1 감소 되고 우 클릭 시 n 변수는 +1 증가 합니다.
+                우 클릭 시 if(n보다 2가 크면) n은 +1 증가하고 
+                n*liwidth = pos;  값만큼 animate{left : pos}, 1000); 이동 합니다. 
+            </p>
+            <p class="tit_p" id="sub0c">3.스크롤이벤트 그리고 비교연산자</p>
+            <img src="./portfolio_img/rooted_business_m.png" alt="">
+            <p class="text">
+                스크롤 시 해당 위치 변경 <br><br>
+                JS : 구역을 구분 짓기 위해 변수 top에 this의 scrollTop 값을 구합니다. 
+                조건문 if (변수 top이 block ratings 섹션 보다 크거나 같으면) { 상단 1번(atarad) 텍스트를 강조합니다. }
+                이렇게 else if / else 를 이용 하여 섹션의 위치를 구한 후 해당 섹션 텍스트에 강조를 주었습니다.                 
+            </p>        
+        </section>
+        
+    </div>    
+    <div class="right_icon">
+        <a href="./index.html#portfolio" class="ico_pf" title="portfolio"></a>
+        <a href="" class="ico_up" title="up"></a>
+    </div>  
+</body>
+</html>

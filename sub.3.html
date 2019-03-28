@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>JIEUN PORTFOLIO - Web publish(Frontend) Developer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/sub.js"></script>
+</head>
+<style>
+.header_wrapper { height: 80px; background:#fff!important; }
+.header_wrapper.fix {background:#fff!important; }
+</style>
+<body>
+    <div class="container sub">
+        <div class="header_wrapper">
+            <div class="header">
+                <div class="nav">
+                    <div class="logo"><img src="images/logo.gif" alt></div>
+                    <h2>블록캐스트</h2>
+                </div>
+            </div>
+        </div>
+        <section>
+            <h2>블록레이팅스</h2>
+            <p class="h2_p">PC/Mobile Site, HTML, CSS, JavaScript</p>
+            <img src="./portfolio_img/rating.pc_main.png" alt="pc" class="img_pc">
+            <img src="./portfolio_img/rating.m_main.png" alt="mobile" class="img_m">
+            <hr style= margin-top:5em;>
+            <p class="text">
+                작업1. <a href="#sub3a">메인의 기능과 효과</a> <br>
+                작업2. <a href="#sub3b">SlideUp / SlideDown </a> <br>
+                작업3. <a href="#sub3c">INPUT 빈값시 경고 </a> <br>
+                작업4. <a href="#sub3d">FadeOut을 이용 하여 태그지우기</a> 
+            </p>
+            <hr>
+            <p class="tit_p" id="sub3a">1.메인의 기능과 효과</p>
+            <video controls>
+                <source src="./portfolio_img/rating.pc_main.mp4" type="video/mp4">
+              </video>
+            <p class="text">
+                    -검색 버튼을 누르면 display:none 검색 바가 display:block이 되며 position이 가진 값으로 이동이 펼쳐지는 모션을 만들 수 있었으며, INPUT 기본 속성 clear 대신 검색창을 닫는 close 버튼 대체하기 위해 clear 속성은 input[type=search]::search-cancel-button 구문을 사용 하여 clear 대신 close 버튼을 사용 할 수 있었습니다. <br>
+                    -subscribe 버튼은 input type='checkbox',label , 가상클래스를 사용하여  checkbox가 checked일때 빨강색이 꽉 채워지며 left 값을 줘서 동적 인 checkbox를 만들수있었습니다.<br>
+                    -좋아요 아이콘 클릭 시 누른 느낌을 주기 위해 keyFrame과 animation을 사용 하여 아이콘이 작아졌다 커지는 효과를 만들었습니다.<br>
+                    -슬라이드 아이템에 마우스 올릴 시 아이템 선택 아이템 강조를 위해 transform scale(1.2) 사용 하였습니다. 슬라이드는 if else 구문과 증가,감소를 사용 하여 자체 제작을 했습니다. 
+                     
+                                           
+            </p>
+            <p class="tit_p" id="sub3b">2.SlideUp / SlideDown</p>
+            <video controls>
+                <source src="./portfolio_img/rating.m_menu.mp4" type="video/mp4">
+            </video>
+            <p class="text">
+                    menu 터치 시 slideUp 이벤트가 발생 되고 X 터치 시 slideDown 이벤트가 발생 됩니다. 간단 jQuery 이지만 모션이 자연스럽습니다. 
+            </p>
+            <p class="tit_p" id="sub3c">3.INPUT 빈값시 경고</p>
+            <video controls>
+                <source src="./portfolio_img/rating,m_trade1.mp4" type="video/mp4">
+            </video>
+            <p class="text">
+                    Enter Trade에 Date,Price,Share 한가지라도 입력 누락 후 SUBMIT을 누르면 Enter Trade Box에 빨간 border가 생기도록 경고를 주었습니다.
+                    또한 작성 완료 후 SUBMIT 클릭 시 JS로 입력 정보에 대한 자세한 정보가 보이도록 css가 변하게 만들었습니다.              
+            </p>           
+            <p class="tit_p" id="sub3d">4.FadeOut을 이용 하여 태그지우기</p>
+            <video controls>
+                <source src="./portfolio_img/rating.m_delete.mp4" type="video/mp4">
+            </video>
+            <p class="text">
+                    delete 버튼 터치 시 this에 delete class를 가지고 있는 조건이면, this의 부모를 fadeOut 하여 tag를 지우는 효과를 줬습니다.              
+            </p>          
+        </section>
+        
+    </div>    
+    <div class="right_icon">
+        <a href="./index.html#portfolio" class="ico_pf" title="portfolio"></a>
+        <a href="" class="ico_up" title="up"></a>
+    </div> 
+</body>
+</html>

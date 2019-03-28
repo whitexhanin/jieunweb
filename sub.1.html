@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>JIEUN PORTFOLIO - Web publish(Frontend) Developer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/sub.js"></script>
+</head>
+<style>
+.header_wrapper { height: 80px; background:#fff!important; }
+.header_wrapper.fix {background:#fff!important; }
+</style>
+<body>
+    <div class="container sub">
+        <div class="header_wrapper">
+            <div class="header">
+                <div class="nav">
+                    <div class="logo"><img src="images/logo.gif" alt></div>
+                    <h2>블록캐스트</h2>
+                </div>
+            </div>
+        </div>
+        <section>
+            <h2>블록캐스트</h2>
+            <p class="h2_p">PC/Mobile Site, HTML, CSS, JavaScript</p>
+            <img src="./portfolio_img/cast_pc.png" alt="pc" class="img_pc">
+            <img src="./portfolio_img/cast_m.png" alt="mobile" class="img_m">
+            <hr style= margin-top:5em;>
+            <p class="text">
+                작업1. <a href="#sub1a">스크랩 모션</a> <br>
+                작업2. <a href="#sub1b">선택한 view 타입으로 바꾸기</a> <br>
+                작업3. <a href="#sub1c">value 값 구분하기</a> <br>
+                작업4. <a href="#sub1d">slideDown/slideUp 이벤트를 이용 한 게시판 </a> 
+            </p>
+            <hr>
+            <p class="tit_p" id="sub1a">1.스크랩 모션</p>
+            <video controls>
+                <source src="./portfolio_img/cast.pc_scrab.mp4" type="video/mp4">
+              </video>
+            <p class="text">
+                스크랩 아이콘 클릭 시  <br><br>
+                HTML : 스크랩 모달 div 태그를 만듭니다.<br> 
+                CSS : 스크랩 모달이 위에서 나오는 효과는 top이 -100에서 0으로 바뀌면서 만들어진 효과이며, 스크랩 생성 시 메뉴가 좌우로 흔들리는 효과는 @keyframes을 이용 하여 %분기로 rotate 값을 줘서 animation으로 움직 일 수 있게 만들었습니다. <br> 
+                JS : 스크랩 모달이 나타날때 사라질때 fadeIn/fadeOut을 사용 했으며,효과는 css에 입력 된 class를 addClass/removeClass 로 작업 했습니다.
+                또한 input에는 keydown을 이용 하여 값 입력 시 스크랩 생성 버튼이 빨강으로 변하게 작업 했습니다.  
+                
+            </p>
+            <p class="tit_p" id="sub1b">2.선택한 view 타입으로 바꾸기</p>
+            <video controls>
+                <source src="./portfolio_img/cast.m._viewtype.mp4" type="video/mp4">
+            </video>
+            <p class="text">
+                   JS : 선택된 option 'this' background-image를 select img로 변환(옮겨담기)하기.  
+                    변수 img에 'this' background-image 값을 담습니다.
+                    option 'this' 클릭 시 select img는 .css({'background-image' : img}); 통해 
+                    선택된 option 'this'의 img가 select img로 들어가게 합니다. 
+
+
+            </p>
+            <p class="tit_p" id="sub1c">3.value 값 구분하기 </p>
+            <video controls>
+                <source src="./portfolio_img/cast.m._input.mp4" type="video/mp4">
+            </video>
+            <p class="text">
+                텍스트 입력 시 왼쪽 반달 포인트에 파란색이 채워지게 작업 했습니다. <br><br>
+                JS : if("" == input.val() || null == input.val()) { 파란색 지워집니다 } else { 파란색 채워집니다 }
+                
+            </p>
+            <p class="tit_p" id="sub1d">4.slideDown/slideUp 이벤트를 이용 한 게시판</p>
+            <video controls>
+                <source src="./portfolio_img/cast.m._toggle.mp4" type="video/mp4">
+            </video>
+            <p class="text">
+                 JS : slideDown/slideUp 이벤트를 이용 한 게시판       
+            </p>         
+        </section>
+        
+    </div>
+    <div class="right_icon">
+        <a href="./index.html#portfolio" class="ico_pf" title="portfolio"></a>
+        <a href="" class="ico_up" title="up"></a>
+    </div>    
+</body>
+</html>

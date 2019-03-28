@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>JIEUN PORTFOLIO - Web publish(Frontend) Developer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/sub.js"></script>
+</head>
+<style>
+.header_wrapper { height: 80px; background:#fff!important; }
+.header_wrapper.fix {background:#fff!important; }
+</style>
+<body>
+    <div class="container sub">
+        <div class="header_wrapper">
+            <div class="header">
+                <div class="nav">
+                    <div class="logo"><img src="images/logo.gif" alt></div>
+                    <h2>블록캐스트</h2>
+                </div>
+            </div>
+        </div>
+        <section>
+            <h2>ORBS</h2>
+            <p class="h2_p">PC Site, HTML, CSS, JavaScript</p>
+            <img src="./portfolio_img/orbs.png" alt="pc" class="img_pc">
+            <hr style= margin-top:5em;>
+            <p class="text">
+                작업1. <a href="#sub2a">animate를 이용한 동적 효과</a> <br>
+                작업2. <a href="#sub2b">맞춤 슬라이드 제작</a> <br>
+            </p>
+            <hr>
+            <p class="tit_p" id="sub2a">1.animate를 이용한 동적 효과</p>
+            <video controls>
+                <source src="./portfolio_img/orbs_main.mp4" type="video/mp4">
+              </video>
+            <p class="text">
+                if else 조건문으로 5개의 section 구간을 구분 짓습니다. 
+                스크롤 시 조건에 맞는 구간에 도착 하면 오른쪽 네비게이션은 현재 위치의 메뉴가 active 됩니다.
+                또한 if else 조건에 맞으면 .animate({'margin-left' : '0' , opacity : '1'}) 식으로 만들어, 
+                animate 내 margin으로 좌,우,위,아래 움직이는 효과를 낼 수 있었습니다.                            
+            </p>
+            <p class="tit_p" id="sub2b">2.맞춤 슬라이드 제작</p>
+            <video controls>
+                <source src="./portfolio_img/orbs_slider.mp4" type="video/mp4">
+            </video>
+            <p class="text">
+    
+                HTML : div > ul > li 구조를 만듭니다. <br>
+                JS : n 변수 선언 사용처는 좌 클릭 시 n 변수는 -1 감소 되고 우 클릭 시 n 변수는 +1 증가 합니다.
+                우 클릭 시 if(n보다 2가 크면) n은 +1 증가하고 
+                n*liwidth = pos;  값만큼 animate{left : pos}, 1000); 이동 합니다. 
+                선택 된 아이템이 중간으로 와서 펼쳐지는 모션을 만들려면
+                필요한 건 아이템을 감싸고 있는 ul의 width/2,아이템의 width/2, 선택한 아이템의 left값을 빼면 아이템이 중간에 맞춰집니다. 
+
+
+                
+            </p>                  
+        </section>
+        
+    </div>
+    <div class="right_icon">
+        <a href="./index.html#portfolio" class="ico_pf" title="portfolio"></a>
+        <a href="" class="ico_up" title="up"></a>
+    </div>     
+</body>
+</html>
